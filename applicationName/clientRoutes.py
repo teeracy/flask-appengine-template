@@ -7,7 +7,7 @@ from applicationName.models import *
 @app.route('/')
 def indexView():
     return flask.render_template('index.html',
-        param="params"
+        pageTitle="Index Page"
     )
 
 @app.errorhandler(404)

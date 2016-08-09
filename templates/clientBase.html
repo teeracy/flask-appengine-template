@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Buoy Up</title>
+    <title>
+        {% if pageTitle %}
+            {{ pageTitle }}
+        {% else %}
+            applicationName <!-- CUSTOMIZE --> 
+        {% endif %}
+    </title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,8 +35,5 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
 
-    <script>
-        <!-- CUSTOMIZE: google analytics --> 
-    </script>
 </body>
 </html>
