@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buoy Up</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.ico') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type='text/css'/>
+</head>
+<body> 
+
+    {% block header %}
+        {% include 'header.html' %}
+    {% endblock %}
+
+    <div class="container">
+        {% block body %}
+        {% endblock %}
+    </div>
+    
+    {% block footer %}
+        {% include 'footer.html' %}
+    {% endblock %}
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <script>
+        <!-- CUSTOMIZE: google analytics --> 
+    </script>
+</body>
+</html>

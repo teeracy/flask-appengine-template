@@ -1,0 +1,4 @@
+*.pyc
+.DS_Store
+# don't include third-party dependencies.
+/lib
